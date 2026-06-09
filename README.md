@@ -1,4 +1,4 @@
-# Latex-tools
+# LaTeX-tools
 あらゆるツールの表示形式からLatexのコード形式に変換します
 
 ## [csv to LaTeX tabular](csv-to-latex/csv-to-latex_tabular.html)
