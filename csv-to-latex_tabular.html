@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV to LaTeX Tabular Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>CSV to LaTeX Tabular 変換ツール</h1>
+
+    <div class="section">
+        <h3>1. CSVファイルをアップロード</h3>
+        <input type="file" id="csvFile" accept=".csv">
+    </div>
+
+    <div class="section">
+        <h3>または、CSVテキストを直接貼り付け</h3>
+        <textarea id="csvText" placeholder="名前,年齢,職業&#10;田中,25,エンジニア&#10;佐藤,30,デザイナー"></textarea>
+    </div>
+
+    <button id="convertBtn" class="btn-main">LaTeXに変換</button>
+
+    <div class="section">
+        <h3>変換結果 (LaTeX コード)</h3>
+        <pre><code id="output"></code></pre>
+        <button id="copyBtn" class="btn-sub">コピー</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
