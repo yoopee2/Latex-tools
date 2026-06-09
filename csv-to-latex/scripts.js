@@ -14,12 +14,10 @@ function convertCSVtoLaTeX(csvString) {
         bodyRows.push(cells.join(' & ') + ' \\\\ \\hline');
     });
 
-    const colSpec = Array(maxColumns).fill('c').join('|');
+    
 
-    let latex = `\\begin{tabular}{|${colSpec}|}\n`;
-    latex += `\\hline\n`;
-    latex += bodyRows.join('\n') + `\n`;
-    latex += `\\end{tabular}`;
+    let latex += `\\hline\n`;
+    latex += bodyRows.join('\n') + `\n;
 
     return latex;
 }
