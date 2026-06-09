@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>文章整理-LaTeX-</title>
+	<script src="scripts.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+<h1>レポートの表記修正ツール</h1><br/>
+<a>「、」や「。」などのレポートでよろしくない表記を正しい表記に変換します</a>
+
+<div class="section">
+	<h3>テキストを貼りつけ</h3>
+	<textarea id="text"></textarea>
+</div>
+
+<div class="check_list">
+<h3>修正する部分</h3>
+<label><input type="checkbox" id="kutouten" checked>「、」、「。」</label><br/>
+<label><input type="checkbox" id="space" checked>全角スペース</label>
+</div>
+
+<button id="exe" class="main_btn" onClick="exe()">正規表現へ変換</button>
+
+<div class="section">
+	<h3>修正後テキスト</h3>
+	<textarea id="output"></textarea>
+	
+</div>
+
+</body>
+</html>
