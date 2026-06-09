@@ -11,7 +11,18 @@
 
 <body>
 <h1>レポートの表記修正ツール</h1><br/>
-<a>「、」や「。」などのレポートでよろしくない表記を正しい表記に変換します</a>
+<a>「、」や「。」などのレポート等で一般的に使用されない表記を正しい表記に変換します</a>
+
+<details>
+	<summary>使い方</summary>
+	<h3>使い方</h3>
+	<ol>
+		<li>下の「テキストを貼り付け」の下の欄に変換したいテキストを入力する</li>
+		<li>修正したい部分にチェックを入れる</li>
+		<li>下の青いボタン「表記を修正」を押す</li>
+	</ol>
+	<p>※文字数制限は基本的にありませんが、計算量がO(N)なので注意してください。</p>
+</details>
 
 <div class="section">
 	<h3>テキストを貼りつけ</h3>
@@ -25,7 +36,7 @@
 <label><input type="checkbox" id="zenkaku" checked>全角文字</label>
 </div>
 
-<button id="exe" class="main_btn" onClick="exe()">表記を変換</button>
+<button id="exe" class="main_btn" onClick="exe()">表記を修正</button>
 
 <div class="section">
 	<h3>修正後テキスト</h3>
