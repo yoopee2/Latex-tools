@@ -6,3 +6,8 @@
 
 ## [report end fix](kutouten/main.html)
 文章の句読点「、」や「。」と全角スペースをレポートや論文等での表記である「，」「．」と半角スペースへ変換します。
+
+
+
+
+[バグ報告](https://github.com/yoopee2/Latex-tools/issues)
