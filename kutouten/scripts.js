@@ -1,7 +1,7 @@
 const trans = document.getElementById('exe')
 
 trans.addEventListener('click',()=>{
-	aler(text.value);
+	alert(text.value);
 });
 
 function exe(){
@@ -18,6 +18,15 @@ function exe(){
 		out = out.replace(/　/g,' ');
 	}
 	
-		document.getElementById('output').value = out;
+	const zenkaku = document.getElementById('zenkaku').checked;
+	if(zenkaku){
+		out = out.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(c){
+			var charCode = c.codePointAt(0);
+			charCode -= 65248;
+			const hankaku = String.fromCodePoint(charCode);
+			return hankaku;
+		});
+	}
 	
+		document.getElementById('output').value = out;
 }
