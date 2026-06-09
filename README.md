@@ -9,5 +9,5 @@
 
 
 
-
+***
 [バグ報告](https://github.com/yoopee2/Latex-tools/issues)
