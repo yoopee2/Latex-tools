@@ -1,9 +1,3 @@
-const trans = document.getElementById('exe')
-
-trans.addEventListener('click',()=>{
-	alert(text.value);
-});
-
 function exe(){
 
 	var out = document.getElementById('text').value;
@@ -49,3 +43,17 @@ function exe(){
 			document.getElementById('output').value = out;
 	}
 }
+
+
+document.getElementById('copy').addEventListener('click', ()=>{
+	const copyText = document.getElementById('output').value;
+	if(copyText == ""){
+		return;
+	}
+	navigator.clipboard.writeText(copyText);
+	const toast = document.getElementById('toast');
+	toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3000);
+});
