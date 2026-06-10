@@ -11,13 +11,13 @@ function convertCSVtoLaTeX(csvString) {
         if (cells.length > maxColumns) {
             maxColumns = cells.length;
         }
-        bodyRows.push(cells.join(' & ') + ' \\\\ \\hline');
+        // ① ループの中では「\\（行の終わり）」だけを付ける
+        bodyRows.push(cells.join(' & ') + ' \\\\'); 
     });
 
-    
-
-let latex = `\\hline\n`; // 最初は「=」で変数を作る
-latex += bodyRows.join('\n') + `\n`; // 末尾のバッククォートをしっかり閉じる
+    let latex = `\\hline\n`;
+    // ② 結合した一番最後に、1回だけ「\hline」を足す
+    latex += bodyRows.join('\n') + `\n\\hline\n`;
 
     return latex;
 }
