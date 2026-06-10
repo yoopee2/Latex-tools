@@ -16,8 +16,8 @@ function convertCSVtoLaTeX(csvString) {
 
     
 
-    let latex += `\\hline\n`;
-    latex += bodyRows.join('\n') + `\n;
+let latex = `\\hline\n`; // 最初は「=」で変数を作る
+latex += bodyRows.join('\n') + `\n`; // 末尾のバッククォートをしっかり閉じる
 
     return latex;
 }
