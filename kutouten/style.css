@@ -8,6 +8,7 @@ textarea {
     border-radius: 6px;
     resize: vertical;
 }
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 40px auto;
@@ -31,11 +32,13 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
 button {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .main_btn {
     display: block;
     width: 100%;
@@ -47,6 +50,7 @@ button {
     border-radius: 6px;
     margin-bottom: 20px;
 }
+
 input[type="checkbox"] {
   position: relative;
   width: 24px;
@@ -69,4 +73,25 @@ input[type="checkbox"]:checked:before {
   border-bottom: 2px solid #000;
   content: '';
 }
+
+.toast {
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999; 
+  transition: top 0.4s ease-in-out; 
+}
+
+.toast.show {
+  top: 20px; 
+}
+
 
