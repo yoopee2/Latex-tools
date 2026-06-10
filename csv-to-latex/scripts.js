@@ -6,18 +6,32 @@ function convertCSVtoLaTeX(csvString) {
     let maxColumns = 0;
     let bodyRows = [];
 
+    // 1. 各行を読み込んで、セルの結合と最大列数の計算を行う
     lines.forEach(line => {
         const cells = line.split(',');
         if (cells.length > maxColumns) {
             maxColumns = cells.length;
         }
-        // ① ループの中では「\\（行の終わり）」だけを付ける
-        bodyRows.push(cells.join(' & ') + ' \\\\'); 
+        // ループの中は改行（\\）のみ出力する
+        bodyRows.push(cells.join(' & ') + ' \\\\');
     });
 
-    let latex = `\\hline\n`;
-    // ② 結合した一番最後に、1回だけ「\hline」を足す
-    latex += bodyRows.join('\n') + `\n\\hline\n`;
+    // 2. LaTeXの表（Tabular）の組み立て
+    // maxColumnsの数だけ「c」（中央揃え）を作り、「|」で繋ぐ
+    const columnFormat = Array(maxColumns).fill('c').join('|');
+    
+    // 表の開始
+    let latex = `\\begin{tabular}{|${columnFormat}|}\n`;
+    
+    // 一番上の横線
+    latex += `\\hline\n`; 
+    
+    // 表の中身（各行）
+    latex += bodyRows.join('\n') + `\n`; 
+    
+    // 一番下の横線と、表の終了
+    latex += `\\hline\n`; 
+    latex += `\\end{tabular}`;
 
     return latex;
 }
