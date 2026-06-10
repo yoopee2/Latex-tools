@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>文章整理-LaTeX-</title>
-	<script src="scripts.js"></script>
 	<link rel="stylesheet" href="style.css">
 
 
@@ -29,6 +28,7 @@
 	<textarea id="text"></textarea>
 	<h3>.texまたは.txt形式のファイルをアップロード</h3>
 	<input type="file" id="file" accept=".tex, .txt"/>
+</div>
 
 <div class="check_list">
 <h3>修正する部分</h3>
@@ -42,8 +42,13 @@
 <div class="section">
 	<h3>修正後テキスト</h3>
 	<textarea id="output"></textarea>
-	
+	<button id="copy" class="main_btn">クリップボードにコピー</button>
 </div>
 
+
+<div class="toast" id="toast">クリップボードにコピーしました</div>
+
+
+<script src="scripts.js"></script>
 </body>
 </html>
