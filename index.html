@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>ref&label checker</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h1>参照確認</h1><br/>
+<p>\refと\labelが正しく参照できているかを確認します．</p>
+
+<details>
+	<summary>使い方</summary>
+	<h3>使い方</h3>
+	<ol>
+		<li>下の入力欄にコードを貼り付け<br/>または，.texファイルをアップロード</li>
+		<li>「表示オプション」で出力したい項目を選ぶ</li>
+		<li>「確認」ボタンを押す</li>
+		<li>出力欄に参照元と参照先の一覧を表示します</li>
+	</ol>
+</details>
+
+<div class="section">
+	<h3>テキストを貼りつけ</h3>
+	<textarea id="text"></textarea>
+	<h3>.texまたは.txt形式のファイルをアップロード</h3>
+	<input type="file" id="file" accept=".tex, .txt"/>
+</div>
+
+<div class="section">
+	<h3>表示オプション</h3>
+	<label><input type="checkbox" id="showNormal"> 正常な項目を表示</label><br/>
+	<label><input type="checkbox" id="showUnused" checked> ⚠️ 未参照の \label を表示</label><br/>
+	<label><input type="checkbox" id="showUndefined" checked> ❌ 未定義の \ref を表示</label>
+</div>
+
+<button id="exe" class="main_btn">確認</button>
+
+<div class="section" id="labelResult" style="display: none; padding: 15px;"></div>
+
+<div class="toast" id="toast">テキストを入力，またはファイルをアップロードしてください</div>
+
+<script src="script.js"></script>
+</body>
+</html>
