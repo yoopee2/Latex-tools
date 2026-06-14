@@ -1,12 +1,6 @@
-<div align="center">
-
 # LaTeX-tools
 
 あらゆるツールの表示形式からLaTeXのコード形式に変換します
-
-</div>
-
-<br>
 
 ## [csv to LaTeX tabular](csv-to-latex/csv-to-latex_tabular.html)
 カンマと改行で区切られた表の表記をLaTeXのtabularの表記へと変換します．csvファイルからも可能です．
@@ -17,17 +11,8 @@
 ## [\ref and \label cheker](ref_label_cheker/index.html)
 \refや\labelに関する参照忘れによる「??」の原因を分析するツールです．
 
-<br>
-
 ---
-
-<div align="center">
 
 [バグ報告](https://github.com/yoopee2/Latex-tools/issues)
 
-<br>
-<br>
-
 Created by yoopee
-
-</div>
